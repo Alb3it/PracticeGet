@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
                 fontSize: 14,
                 fontWeight: FontWeight.w400),
           )),
-      initialRoute: '/main',
+      initialRoute: '/',
       getPages: [
         GetPage(name: '/', page: () => SplashPage()),
         GetPage(name: '/login', page: () => Login()),

@@ -19,6 +19,13 @@ class _MainState extends State<Main> {
   }
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    print('maincon Init');
+  }
+
+  @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(

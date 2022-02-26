@@ -1,0 +1,10 @@
+export 'package:masterofget/components/main_bar_rabbit_left.dart';
+export 'package:masterofget/components/main_big_tile.dart';
+export 'package:masterofget/components/main_big_tile_rabbit_left.dart';
+export 'package:masterofget/components/main_big_tile_rabbit_right.dart';
+export 'package:masterofget/components/main_last_makeup.dart';
+export 'package:masterofget/components/main_last_tile.dart';
+export 'package:masterofget/components/main_sales_info.dart';
+export 'package:masterofget/components/main_small_tile.dart';
+export 'package:masterofget/components/main_small_title.dart';
+export 'package:masterofget/components/main_triple_tiles.dart';
