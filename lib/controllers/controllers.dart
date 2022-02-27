@@ -58,3 +58,26 @@ class WeekToggleController extends GetxController {
     update();
   }
 }
+
+class WeekBrandChartCategoryController extends GetxController {
+  int category = 0;
+  void setFirst() {
+    category = 0;
+    update();
+  }
+
+  void setSecond() {
+    category = 1;
+    update();
+  }
+
+  void setThird() {
+    category = 2;
+    update();
+  }
+
+  void setFourth() {
+    category = 3;
+    update();
+  }
+}

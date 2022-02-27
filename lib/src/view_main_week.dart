@@ -7,6 +7,7 @@ import 'package:masterofget/function/Day2Week.dart';
 class ViewMainWeek extends StatelessWidget {
   ViewMainWeek({Key? key}) : super(key: key);
   final weekdayController = Get.put(WeekToggleController());
+  final dateController = Get.put(DateSelectController());
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +43,15 @@ class ViewMainWeek extends StatelessWidget {
           }),
           MainSmallTitle(1, 1),
           MainBigTileRabbitRight(1, 1, 2),
+          MainBrandToggle(),
+          GetBuilder<WeekBrandChartCategoryController>(builder: (_) {
+            return MainChart2(
+                _.category,
+                dateController.selectedDate,
+                dateController.selectedDate.day -
+                    dateController.selectedDate.weekday +
+                    1);
+          }),
           MainSmallTitle(1, 2),
           MainBigTileRabbitLeft(1, 2, 3),
           MainSmallTitle(1, 3),

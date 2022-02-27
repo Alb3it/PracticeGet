@@ -7,10 +7,11 @@ import 'package:masterofget/controllers/controllers.dart';
 
 class MainChart2 extends StatelessWidget {
   final int type;
-  final int order;
-  final int month;
+  final DateTime date;
   final int start;
-  MainChart2(this.type, this.order, this.month, this.start);
+  MainChart2(this.type, this.date, this.start);
+
+  final catController = Get.put(WeekBrandChartCategoryController());
 
 //to make 15.00 to 15
   String format(double n) {
@@ -21,9 +22,15 @@ class MainChart2 extends StatelessWidget {
 //message on the tooltip
   List<LineTooltipItem> _getTooltipItems(List<LineBarSpot> l) {
     List<LineTooltipItem> result = [];
-    result.add(LineTooltipItem(
-        '${month}월 ${start + l[0].spotIndex}일 \n 매출액: ${format(SalesGraph[type - 1][order - 1][l[0].spotIndex].y)}만원',
-        TextStyle(fontSize: 14)));
+    if (type == 0) {
+      result.add(LineTooltipItem(
+          '${date.year}.${date.month}.${start + l[0].spotIndex} \n ${format(WeekBrandGraph[type][l[0].spotIndex].y)}건',
+          TextStyle(fontSize: 14)));
+    } else {
+      result.add(LineTooltipItem(
+          '${date.year}.${date.month}.${start + l[0].spotIndex} \n ${format(-WeekBrandGraph[type][l[0].spotIndex].y)}위',
+          TextStyle(fontSize: 14)));
+    }
     return result;
   }
 
@@ -51,7 +58,7 @@ class MainChart2 extends StatelessWidget {
           LineChartData(
             lineBarsData: [
               LineChartBarData(
-                  spots: SalesGraph[type - 1][order - 1],
+                  spots: WeekBrandGraph[type],
                   isCurved: true,
                   colors: [Colors.black],
                   belowBarData: BarAreaData(

@@ -12,3 +12,4 @@ export 'package:masterofget/components/main_chart1.dart';
 export 'package:masterofget/components/main_week_toggle.dart';
 export 'package:masterofget/components/main_circle_indicator.dart';
 export 'package:masterofget/components/main_chart2.dart';
+export 'package:masterofget/components/main_brand_toggle.dart';

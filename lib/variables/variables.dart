@@ -233,3 +233,42 @@ List<List<List<FlSpot>>> SalesGraph = [
     ]
   ],
 ];
+
+List<List<FlSpot>> WeekBrandGraph = [
+  [
+    FlSpot(1, 20),
+    FlSpot(2, 34),
+    FlSpot(3, 57),
+    FlSpot(4, 79),
+    FlSpot(5, 34),
+    FlSpot(6, 45),
+    FlSpot(7, 50)
+  ],
+  [
+    FlSpot(1, -17),
+    FlSpot(2, -15),
+    FlSpot(3, -16),
+    FlSpot(4, -21),
+    FlSpot(5, -12),
+    FlSpot(6, -11),
+    FlSpot(7, -9)
+  ],
+  [
+    FlSpot(1, -30),
+    FlSpot(2, -27),
+    FlSpot(3, -28),
+    FlSpot(4, -26),
+    FlSpot(5, -25),
+    FlSpot(6, -21),
+    FlSpot(7, -13)
+  ],
+  [
+    FlSpot(1, -19),
+    FlSpot(2, -19),
+    FlSpot(3, -18),
+    FlSpot(4, -19),
+    FlSpot(5, -17),
+    FlSpot(6, -16),
+    FlSpot(7, -12)
+  ]
+];

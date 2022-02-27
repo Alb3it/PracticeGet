@@ -21,10 +21,11 @@ class Login extends StatelessWidget {
         body: <String, String>{'email': id, 'password': pw});
     String response = utf8.decode(res.bodyBytes);
     Map responsejson = jsonDecode(response);
+    print(response);
     if (responsejson['message'] == 'success') {
       const storage = FlutterSecureStorage();
       storage.write(key: response, value: 'LOGIN');
-      Get.offAllNamed('/select');
+      Get.offAllNamed('/select', arguments: responsejson);
     }
   }
 
