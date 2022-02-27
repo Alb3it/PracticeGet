@@ -45,3 +45,16 @@ class PeriodSelectController extends GetxController {
     update();
   }
 }
+
+class WeekToggleController extends GetxController {
+  bool isweekday = true;
+  void weekday() {
+    isweekday = true;
+    update();
+  }
+
+  void weekend() {
+    isweekday = false;
+    update();
+  }
+}

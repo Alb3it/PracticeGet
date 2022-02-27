@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:masterofget/main.dart';
+import 'package:masterofget/style/styles.dart';
 import '../variables/variables.dart';
 import 'package:bubble/bubble.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
@@ -12,9 +14,10 @@ class MainBarRabbitLeft extends StatelessWidget {
       child: Stack(
         children: [
           Padding(
-              padding: const EdgeInsets.only(right: 30, top: 20),
+              padding: const EdgeInsets.only(right: 30, top: 20, left: 105),
               child: SizedBox(
-                child: Row(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Bubble(
                         nip: BubbleNip.leftBottom,
@@ -23,8 +26,7 @@ class MainBarRabbitLeft extends StatelessWidget {
                         nipOffset: 2,
                         elevation: 20,
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 10, horizontal: 60),
+                          padding: const EdgeInsets.symmetric(vertical: 10),
                           child: Text(
                             mainRabbitBubble[type][order],
                             textAlign: TextAlign.center,
@@ -71,6 +73,7 @@ class MainBarRabbitLeft extends StatelessWidget {
                             style: TextStyle(fontSize: 10, color: Colors.white),
                           ),
                           progressColor: Colors.black,
+                          backgroundColor: ThemaColor,
                         ),
                         Text(
                           mainBarIndex[type][1],

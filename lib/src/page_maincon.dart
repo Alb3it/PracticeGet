@@ -13,6 +13,7 @@ class Main extends StatefulWidget {
 class _MainState extends State<Main> {
   int _currentIndex = 0;
   void _onTap(int i) {
+    if (i == 0) {}
     setState(() {
       _currentIndex = i;
     });

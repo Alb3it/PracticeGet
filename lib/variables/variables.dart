@@ -5,6 +5,7 @@ import 'package:masterofget/src/view_main.dart';
 import 'package:masterofget/src/view_main_day.dart';
 import 'package:masterofget/src/view_main_week.dart';
 import 'package:masterofget/src/view_main_month.dart';
+import 'package:fl_chart/fl_chart.dart';
 
 //Icon imports
 final Widget iconFirst1 = SvgPicture.asset(
@@ -64,6 +65,18 @@ final Widget iconBrandRank = SvgPicture.asset('icons/brandrank.svg');
 final Widget iconSearchSection = SvgPicture.asset('icons/search_section.svg');
 final Widget iconSearchCategory = SvgPicture.asset('icons/search_category.svg');
 final Widget iconRightAngle = SvgPicture.asset('icons/rightAngle.svg');
+final Widget mainWeekBigTile1 =
+    SvgPicture.asset('icons/main_week_big_tile1.svg');
+final Widget mainWeekBigTile2 =
+    SvgPicture.asset('icons/main_week_big_tile2.svg');
+final Widget mainWeekBigTile3 =
+    SvgPicture.asset('icons/main_week_big_tile3.svg');
+final Widget mainWeekBigTile4 =
+    SvgPicture.asset('icons/main_week_big_tile4.svg');
+final Widget mainWeekBigTile5 =
+    SvgPicture.asset('icons/main_week_big_tile5.svg');
+final Widget mainWeekBigTile6 =
+    SvgPicture.asset('icons/main_week_big_tile6.svg');
 
 List<String> mainSales = ['1,563,400원', '8,301,400원', '28,301,400원'];
 List<String> mainSalesIncrement = ['+32,000', '-982,000', '+4,982,000'];
@@ -108,16 +121,34 @@ List<List<List<Widget>>> mainBigTileIcon = [
   [
     [iconSearch, iconWrite],
     [iconSearchSection, iconSearchCategory]
+  ],
+  [
+    [mainWeekBigTile1, mainWeekBigTile2],
+    [mainWeekBigTile1, mainWeekBigTile2],
+    [mainWeekBigTile3, mainWeekBigTile4],
+    [mainWeekBigTile5, mainWeekBigTile6]
   ]
 ];
 List<List<List<String>>> mainBigTileTitle = [
   [
     ['13,254건', '52건'],
     ['13,254건', '52건']
+  ],
+  [
+    ['973,000원', '34,000원'],
+    ['120,120원', '72,300원'],
+    ['143,254건', '423건'],
+    ['113,254건', '29,435건']
   ]
 ];
 List<List<List<String>>> mainBigTileSubTitle = [
   [
+    ['브랜드 검색량', '브랜드 컨텐츠 발행량'],
+    ['상권 검색량', '업종 검색량']
+  ],
+  [
+    ['평균 매출액', '평균 결제단가'],
+    ['평균 매출액', '평균 결제단가'],
     ['브랜드 검색량', '브랜드 컨텐츠 발행량'],
     ['상권 검색량', '업종 검색량']
   ]
@@ -144,4 +175,61 @@ List<List<String>> mainLastTile = [
     '내 상권에 대한 관심이 떨어지고 있어요',
     '단가가 높은 메뉴의 선호도가 떨어지고 있어요'
   ]
+];
+
+List<List<List<FlSpot>>> SalesGraph = [
+  [
+    [
+      FlSpot(1, 30),
+      FlSpot(2, 50),
+      FlSpot(3, 60),
+      FlSpot(4, 100),
+      FlSpot(5, 120),
+      FlSpot(6, 70),
+      FlSpot(7, 100)
+    ],
+    [
+      FlSpot(1, 20),
+      FlSpot(2, 40),
+      FlSpot(3, 70),
+      FlSpot(4, 130),
+      FlSpot(5, 90),
+      FlSpot(6, 20),
+      FlSpot(7, 120)
+    ],
+    [
+      FlSpot(1, 40),
+      FlSpot(2, 60),
+      FlSpot(3, 50),
+      FlSpot(4, 90),
+      FlSpot(5, 130),
+      FlSpot(6, 110),
+      FlSpot(7, 10)
+    ],
+    [
+      FlSpot(1, 50),
+      FlSpot(2, 90),
+      FlSpot(3, 50),
+      FlSpot(4, 80),
+      FlSpot(5, 90),
+      FlSpot(6, 100),
+      FlSpot(7, 140)
+    ],
+  ],
+  [
+    [
+      FlSpot(1, 60),
+      FlSpot(2, 40),
+      FlSpot(3, 30),
+      FlSpot(4, 80),
+      FlSpot(5, 150),
+    ],
+    [
+      FlSpot(1, 20),
+      FlSpot(2, 40),
+      FlSpot(3, 70),
+      FlSpot(4, 30),
+      FlSpot(5, 90),
+    ]
+  ],
 ];

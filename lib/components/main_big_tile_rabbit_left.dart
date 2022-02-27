@@ -39,10 +39,7 @@ class MainBigTileRabbitLeft extends StatelessWidget {
                 ],
               ),
             ),
-            Positioned(
-                top: 110,
-                left: 30,
-                child: MainBigTile(type: type, border: border)),
+            Positioned(top: 110, left: 30, child: MainBigTile(type, border)),
             Positioned(left: 0, child: iconRabbit),
           ],
         ),

@@ -1,17 +1,10 @@
 import 'package:flutter/material.dart';
 import '../variables/variables.dart';
 
-class MainBigTile extends StatefulWidget {
-  const MainBigTile({Key? key, required this.type, required this.border})
-      : super(key: key);
+class MainBigTile extends StatelessWidget {
   final int type, border;
-  @override
-  _MainBigTileState createState() => _MainBigTileState(type, border);
-}
 
-class _MainBigTileState extends State<MainBigTile> {
-  final int type, border;
-  _MainBigTileState(this.type, this.border);
+  MainBigTile(this.type, this.border);
   @override
   Widget build(BuildContext context) {
     return Container(

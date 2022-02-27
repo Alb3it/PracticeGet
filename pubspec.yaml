@@ -44,6 +44,7 @@ dependencies:
   percent_indicator: ^4.0.0
   syncfusion_flutter_datepicker: ^19.4.53
   get: 
+  fl_chart: ^0.45.0
 
 dev_dependencies:
   flutter_test:
@@ -104,6 +105,12 @@ flutter:
     - icons/search_section.svg
     - icons/search_category.svg
     - icons/rightAngle.svg
+    - icons/main_week_big_tile1.svg
+    - icons/main_week_big_tile2.svg
+    - icons/main_week_big_tile3.svg
+    - icons/main_week_big_tile4.svg
+    - icons/main_week_big_tile5.svg
+    - icons/main_week_big_tile6.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

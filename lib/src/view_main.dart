@@ -9,12 +9,11 @@ class MainView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final pageController = PageController(
-      initialPage: 0,
-    );
-
     //final DateSelectController dateController = DateSelectController();
     final periodController = Get.put(PeriodSelectController());
+
+    final pageController =
+        PageController(initialPage: periodController.periodSelected);
 
     void _onPageChanged(int page) {
       periodController.setPeriod(page);
@@ -150,6 +149,7 @@ class MainView extends StatelessWidget {
           children: pages,
           controller: pageController,
           onPageChanged: _onPageChanged,
+          physics: NeverScrollableScrollPhysics(),
         ),
       ),
     );
