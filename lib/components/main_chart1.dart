@@ -5,12 +5,12 @@ import 'package:masterofget/variables/variables.dart';
 import 'package:get/get.dart';
 import 'package:masterofget/controllers/controllers.dart';
 
-class MainChart extends StatelessWidget {
+class MainChart1 extends StatelessWidget {
   final int type;
   final int order;
   final int month;
   final int start;
-  MainChart(this.type, this.order, this.month, this.start);
+  MainChart1(this.type, this.order, this.month, this.start);
 
 //to make 15.00 to 15
   String format(double n) {

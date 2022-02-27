@@ -8,6 +8,7 @@ export 'package:masterofget/components/main_sales_info.dart';
 export 'package:masterofget/components/main_small_tile.dart';
 export 'package:masterofget/components/main_small_title.dart';
 export 'package:masterofget/components/main_triple_tiles.dart';
-export 'package:masterofget/components/main_chart.dart';
+export 'package:masterofget/components/main_chart1.dart';
 export 'package:masterofget/components/main_week_toggle.dart';
 export 'package:masterofget/components/main_circle_indicator.dart';
+export 'package:masterofget/components/main_chart2.dart';

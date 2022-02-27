@@ -17,7 +17,7 @@ class ViewMainWeek extends StatelessWidget {
         children: [
           MainSalesInfo(1),
           GetBuilder<DateSelectController>(builder: (_) {
-            return MainChart(1, day2Week(_.selectedDate), _.selectedDate.month,
+            return MainChart1(1, day2Week(_.selectedDate), _.selectedDate.month,
                 _.selectedDate.day - _.selectedDate.weekday + 1);
           }),
           MainSmallTitle(1, 0),
@@ -39,7 +39,13 @@ class ViewMainWeek extends StatelessWidget {
             } else
               return MainCircularIndicator(
                   0.53, 0.32, '점심 매출 비율', '재방문자 매출 비율');
-          })
+          }),
+          MainSmallTitle(1, 1),
+          MainBigTileRabbitRight(1, 1, 2),
+          MainSmallTitle(1, 2),
+          MainBigTileRabbitLeft(1, 2, 3),
+          MainSmallTitle(1, 3),
+          MainLastMakeUp(1, 3)
         ],
       ),
     ));
